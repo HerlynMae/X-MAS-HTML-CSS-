@@ -173,6 +173,75 @@ img {
   width: 100%;
 }
 
+/* MOBILE HEADER */
+.header .toggle__menu span {
+  background-color: var(--clr-primary);
+  width: 3rem;
+  height: 0.6rem;
+  display: block;
+  border: 2px solid var(--clr-primary);
+  border-radius: 1rem;
+  transition: all 0.5s ease;
+}
+.header .toggle__menu {
+  display: none;
+}
+@media screen and (max-width: 520px) {
+  .header .toggle__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--clr-light);
+    z-index: 999999;
+  }
+  .header__nav {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-light);
+    width: 100%;
+    height: 100vh;
+    margin-top: 22rem;
+    transform: translateY(-14rem);
+    z-index: 99;
+    right: -100%;
+    transition: all 0.5s ease;
+  }
+  .header__nav.open {
+    right: 0;
+  }
+  .header img {
+    width: 10rem;
+  }
+  .header__nav li a::after {
+    background-color: unset;
+  }
+
+  .header__nav li a:hover,
+  .header__nav li a.active {
+    color: var(--clr-secondary);
+  }
+  .toggle__menu.open span:first-child {
+    transform: translate(0, 10px) rotate(225deg);
+    transition: all 0.5s ease;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .toggle__menu.open span:last-child {
+    transform: translate(0, -11.5px) rotate(-225deg);
+    transition: all 0.5s ease;
+  }
+}
+
 /* BANNER */
 .banner {
   padding-top: 7rem;
@@ -195,6 +264,21 @@ img {
 .banner img {
   margin: 10rem 0;
   width: 100%;
+}
+
+/* MOBILE BANNER */
+@media screen and (max-width: 520px) {
+  .banner {
+    padding-top: 10rem;
+    height: 50rem;
+  }
+  .banner__wrapper h1 {
+    font-size: var(--h3);
+  }
+  .banner img {
+    margin-top: 10rem;
+    margin-bottom: 0;
+  }
 }
 
 /* HOLIDAY */
@@ -239,6 +323,30 @@ img {
   font-size: var(--h4);
   margin-bottom: 2rem;
   color: var(--clr-primary);
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 520px) {
+  .holiday__left h2 {
+    font-size: var(--h3);
+    line-height: 4rem;
+  }
+  .holiday__wrapper {
+    grid-template-columns: 1fr;
+    gap: unset;
+  }
+  .holiday__cards {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .holiday__left {
+    border-right: unset;
+    padding-right: unset;
+  }
+  .holiday,
+  .holiday__right {
+    margin-top: 0rem;
+  }
 }
 
 /* DESIGNS */
@@ -303,6 +411,28 @@ img {
 
 .design__card small {
   font-size: 1.3rem;
+}
+
+/* MOBILE DESIGN */
+@media screen and (max-width: 520px) {
+  .design__img {
+    display: none;
+  }
+  .design__content {
+    margin-top: 5rem;
+    flex-direction: column;
+    background-color: unset;
+  }
+  .design__wrapper {
+    height: 100%;
+  }
+  .design__card {
+    background-color: var(--clr-light);
+    margin-bottom: 2rem;
+  }
+  .design {
+    margin-bottom: unset;
+  }
 }
 
 /* TRADITIONS */
@@ -416,6 +546,26 @@ img {
   bottom: 5rem;
 }
 
+/* MOBILE TRADITION */
+@media screen and (max-width: 520px) {
+  .tradition__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .tradition__item {
+    flex-direction: column;
+  }
+  .tradition__item img {
+    width: 100%;
+  }
+  .flakes-2 {
+    position: absolute;
+    font-size: 5rem;
+    clip-path: rect(10px 19px 90% 0%);
+    left: 14rem;
+    top: 30rem;
+  }
+}
+
 /* FESTIVITIES */
 .festivities {
   padding: 5rem 0;
@@ -498,6 +648,28 @@ img {
   font-size: 1.2rem;
 }
 
+/* MOBILE FESTIVITIES */
+@media screen and (max-width: 520px) {
+  .festivities__img {
+    display: none;
+  }
+  .festivities__content {
+    margin-top: 5rem;
+    flex-direction: column;
+    background-color: unset;
+  }
+  .festivities__wrapper {
+    height: 100%;
+  }
+  .festivities__item {
+    background-color: var(--clr-light);
+    margin-bottom: 2rem;
+  }
+  .festivities {
+    margin-bottom: unset;
+  }
+}
+
 /* DECORATIONS */
 .decor {
   padding: 5rem 0;
@@ -540,8 +712,18 @@ img {
   color: var(--clr-primary);
 }
 
-/* FOOTER */
+/* MOBILE DECOR */
+@media screen and (max-width: 520px) {
+  .decor__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .decor__left {
+    border-right: unset;
+    padding-right: unset;
+  }
+}
 
+/* FOOTER */
 .footer {
   padding: 5rem 0;
   background-color: var(--clr-secondary);
@@ -583,6 +765,14 @@ img {
 .footer__links ul li a {
   text-decoration: underline;
   color: var(--clr-light);
+}
+
+/* MOBILE FOOTER */
+@media screen and (max-width: 520px) {
+  .footer__links {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 /* TRADITION PAGE */
@@ -642,7 +832,7 @@ img {
 }
 .art__wrapper {
   background-color: var(--clr-secondary);
-  height: 55rem;
+  height: 60rem;
   margin-bottom: 10rem;
 }
 .art__content {
@@ -660,7 +850,7 @@ img {
   background-color: var(--clr-light);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   transition: 0.5s all ease;
   z-index: 999;
 }
@@ -670,20 +860,16 @@ img {
 }
 .grid img {
   display: block;
-  width: 25rem;
-  /* max-inline-size: 25rem; */
+  width: 100%;
+  height: 100%;
   display: inline-block;
   z-index: -99;
   transition: 0.5s all ease;
   object-fit: cover;
   overflow: hidden;
-}
-.grid img:hover {
-  scale: 0.8;
-  transition: 0.5s all ease;
+  border-bottom: 4px solid #fb5957;
 }
 .grid__text {
-  border-top: 4px solid #fb5957;
   padding: 1rem;
   background-color: var(--clr-light);
 }
@@ -701,15 +887,26 @@ img {
   color: var(--clr-primary);
   font-size: var(--h2);
   text-align: left;
-  line-height: 5rem;
-  margin-top: 2rem;
+  line-height: 7rem;
 }
-.art--e img {
-  width: 100%;
+.art--e > .grid__text {
+  padding: 2rem;
 }
-
-.art--a {
-  grid-area: a;
+.art--g {
+  color: var(--clr-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-light);
+}
+.art--g h3 {
+  font-size: var(--h3);
+  font-family: var(--font-secondary);
+}
+.art--g:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-light);
 }
 .art--b {
   grid-area: b;
