@@ -826,7 +826,6 @@ img {
 }
 .art h2 {
   font-family: var(--font-secondary);
-
   font-size: var(--h2);
   text-align: center;
 }
@@ -931,6 +930,41 @@ img {
 }
 .art--g {
   grid-area: g;
+}
+
+/* MOBILE ART - DESIGN */
+@media screen and (max-width: 520px) {
+  .x-masBanner {
+    padding-top: 10rem;
+  }
+  .x-masBanner h1 {
+    line-height: 8rem;
+    margin-bottom: 3rem;
+  }
+  .art {
+    padding: 2.5rem 0;
+  }
+  .art__wrapper {
+    height: 100%;
+    margin-bottom: unset;
+  }
+  .art__content {
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g";
+  }
+  .art--e h2 {
+    font-size: var(--h5);
+    line-height: unset;
+  }
+  .art--e > .grid__text {
+    padding: 1rem;
+  }
 }
 
 /* REPEATABLE PATTERNS */
