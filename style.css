@@ -767,6 +767,12 @@ img {
   color: var(--clr-light);
 }
 
+.footer__links-a,
+.footer__links-b {
+  display: flex;
+  gap: 5rem;
+}
+
 /* MOBILE FOOTER */
 @media screen and (max-width: 520px) {
   .footer__links {
