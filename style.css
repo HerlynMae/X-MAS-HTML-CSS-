@@ -220,14 +220,17 @@ img {
   .header img {
     width: 10rem;
   }
+  .header__nav li a {
+    font-size: 2rem;
+  }
   .header__nav li a::after {
     background-color: unset;
   }
-
   .header__nav li a:hover,
   .header__nav li a.active {
     color: var(--clr-secondary);
   }
+
   .toggle__menu.open span:first-child {
     transform: translate(0, 10px) rotate(225deg);
     transition: all 0.5s ease;
@@ -964,6 +967,10 @@ img {
   }
   .art--e > .grid__text {
     padding: 1rem;
+  }
+  .grid:hover {
+    transform: unset;
+    transition: 0.5s all ease;
   }
 }
 
