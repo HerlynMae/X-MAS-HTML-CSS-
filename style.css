@@ -177,7 +177,7 @@ img {
 .header .toggle__menu span {
   background-color: var(--clr-primary);
   width: 3rem;
-  height: 0.6rem;
+  height: 0.3rem;
   display: block;
   border: 2px solid var(--clr-primary);
   border-radius: 1rem;
@@ -232,7 +232,7 @@ img {
   }
 
   .toggle__menu.open span:first-child {
-    transform: translate(0, 10px) rotate(225deg);
+    transform: translate(0, 6px) rotate(225deg);
     transition: all 0.5s ease;
   }
   .toggle__menu.open span:nth-child(2) {
@@ -813,6 +813,13 @@ img {
   text-align: center;
 }
 
+/* MOBILE XMAS BANNER */
+@media screen and (max-width: 520px) {
+  .x-masBanner h1 {
+    font-size: var(--h2);
+  }
+}
+
 /* CARDS */
 .Cards {
   padding: 5rem 0;
@@ -821,6 +828,12 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
+}
+/* MOBILE - CARDS */
+@media screen and (max-width: 520px) {
+  .Cards__wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* DESIGN - ART */
