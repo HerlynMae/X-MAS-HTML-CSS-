@@ -816,7 +816,9 @@ img {
 /* MOBILE XMAS BANNER */
 @media screen and (max-width: 520px) {
   .x-masBanner h1 {
+    text-align: center;
     font-size: var(--h2);
+   line-height: 5rem;
   }
 }
 
@@ -952,10 +954,6 @@ img {
 @media screen and (max-width: 520px) {
   .x-masBanner {
     padding-top: 10rem;
-  }
-  .x-masBanner h1 {
-    line-height: 8rem;
-    margin-bottom: 3rem;
   }
   .art {
     padding: 2.5rem 0;
